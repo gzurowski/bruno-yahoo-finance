@@ -1,0 +1,22 @@
+meta {
+  name: Balance Sheet History Quarterly
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=balanceSheetHistoryQuarterly&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: balanceSheetHistoryQuarterly
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}
