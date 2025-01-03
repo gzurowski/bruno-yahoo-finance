@@ -1,0 +1,33 @@
+meta {
+  name: Chart
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v8/finance/chart/:symbol?corsDomain=finance.yahoo.com&crumb={{crumb}}&interval=1mo&period1=1704067200&period2=1735898906&events=div,split,capitalGains
+  body: none
+  auth: none
+}
+
+params:query {
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+  interval: 1mo
+  period1: 1704067200
+  period2: 1735898906
+  events: div,split,capitalGains
+}
+
+params:path {
+  symbol: AAPL
+}
+
+docs {
+  # Parameters
+  
+  ## `events`
+  - `div`: dividends
+  - `splits`: stock splits
+  - `capitalGains`: capital gains for mutual funds and ETFs.
+}
