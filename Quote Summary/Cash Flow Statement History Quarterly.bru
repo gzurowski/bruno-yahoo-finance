@@ -1,0 +1,22 @@
+meta {
+  name: Cash Flow Statement History Quarterly
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=cashFlowStatementHistoryQuarterly&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: cashFlowStatementHistoryQuarterly
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}
