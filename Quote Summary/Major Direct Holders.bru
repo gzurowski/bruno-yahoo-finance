@@ -1,0 +1,22 @@
+meta {
+  name: Major Direct Holders
+  type: http
+  seq: 20
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=majorDirectHolders&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: majorDirectHolders
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}

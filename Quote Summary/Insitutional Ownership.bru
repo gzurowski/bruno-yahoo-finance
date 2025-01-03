@@ -1,0 +1,22 @@
+meta {
+  name: Insitutional Ownership
+  type: http
+  seq: 19
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=institutionOwnership&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: institutionOwnership
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}

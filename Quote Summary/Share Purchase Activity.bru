@@ -1,0 +1,22 @@
+meta {
+  name: Share Purchase Activity
+  type: http
+  seq: 28
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=netSharePurchaseActivity&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: netSharePurchaseActivity
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Page Views
+  type: http
+  seq: 22
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=pageViews&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: pageViews
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}

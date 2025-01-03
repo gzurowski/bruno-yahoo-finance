@@ -1,0 +1,22 @@
+meta {
+  name: Income Statement History Quarterly
+  type: http
+  seq: 14
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=incomeStatementHistoryQuarterly&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: incomeStatementHistoryQuarterly
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+params:path {
+  symbol: AAPL
+}
