@@ -2,6 +2,8 @@
 
 This repository contains a [Bruno](https://www.usebruno.com/) collection for interacting with Yahoo Finance's public API endpoints. Although Yahoo Finance discontinued their official API documentation in 2017, these endpoints remain publicly accessible and functional.
 
+![Bruno Collection for Yahoo Finance](.github/screenshots/bruno-yahoo-finance.png)
+
 ## Prerequisites
 
 - Install [Bruno](https://www.usebruno.com/downloads).
