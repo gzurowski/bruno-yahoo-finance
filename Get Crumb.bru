@@ -1,0 +1,15 @@
+meta {
+  name: Get Crumb
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://query1.finance.yahoo.com/v1/test/getcrumb
+  body: none
+  auth: none
+}
+
+vars:post-response {
+  crumb: res.body
+}
