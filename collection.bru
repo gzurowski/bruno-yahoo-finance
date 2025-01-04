@@ -1,3 +1,23 @@
 headers {
-  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0
+  User-Agent: {{user_agent}}
+  cookie: {{cookie}}
+}
+
+vars:pre-request {
+  user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0
+}
+
+script:pre-request {
+  // Fetch cookie and crumb if not already set as variables
+  if (!bru.getVar('cookie') || !bru.getVar('crumb')) {
+    const auth = require('./scripts/auth');
+  
+    const cookie = await auth.fetchCookie();
+    const crumb = await auth.fetchCrumb(cookie);
+    
+    bru.setVar('cookie', cookie);
+    bru.setVar('crumb', crumb);
+    
+    console.info('Successfully fetched cookie and crumb.');
+  }
 }
