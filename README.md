@@ -25,11 +25,15 @@ Alternatively, you can download the collection as a [ZIP file](https://github.co
 
 ## Authentication
 
-Before making any requests to the actual API endpoints, you need to obtain a security token.
-
-1. Run the _Get Cookies_ request to obtain session cookies. Note that this will return a HTTP 404 error and a corresponding error page which is expected. The cookies are nevertheless stored in Bruno's cookie store and will be used by subsequent requests.
-2. Copy the _Get Crumb_ request to obtain a security token.
-3. Now you can run any other request in the collection.
+All Yahoo Finance endpoints require authentication using:
+- A cookie.
+- A token named `crumb` which must be included as a query parameter in every request.
+Both the cookie and the token are obtained through two separate requests.
+These requests are automatically run by a _pre-request_ script on collection-level.
+Once retrieved, the cookie and the token are stored as variables and automatically included in all requests.
+The script is stored in [scripts/auth.js](scripts/auth.js).
+For reference, this repository also includes separate requests in the [Auth](Auth) folder.
+These are provided for informational purposes only and do not need to be manually run.
 
 ## Notes
 
