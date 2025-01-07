@@ -1,0 +1,19 @@
+meta {
+  name: Quote
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v7/finance/quote?modules=assetProfile&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}&symbols=AAPL,AMD,MSTF
+  body: none
+  auth: none
+}
+
+params:query {
+  modules: assetProfile
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+  symbols: AAPL,AMD,MSTF
+}
