@@ -1,0 +1,21 @@
+meta {
+  name: Trending Stocks
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v1/finance/trending/:region?lang=en-US&region=US&corsDomain=finance.yahoo.com
+  body: none
+  auth: none
+}
+
+params:query {
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+}
+
+params:path {
+  region: us
+}
