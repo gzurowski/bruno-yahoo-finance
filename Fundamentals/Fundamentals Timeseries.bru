@@ -1,0 +1,26 @@
+meta {
+  name: Fundamentals Timeseries
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://query2.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/:symbol?formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}&period1=1704067200&period2=1735898906&padTimeSeries=false&padTimeSeries=false
+  body: none
+  auth: none
+}
+
+params:query {
+  formatted: false
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+  period1: 1704067200
+  period2: 1735898906
+  padTimeSeries: false
+  padTimeSeries: false
+  ~type: NetIncome
+}
+
+params:path {
+  symbol: AAPL
+}
