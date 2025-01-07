@@ -1,0 +1,20 @@
+meta {
+  name: Search
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v1/finance/search?lang=en&region=us&corsDomain=finance.yahoo.com&q=AMD&quotesCount=10&newsCount=10
+  body: none
+  auth: none
+}
+
+params:query {
+  lang: en
+  region: us
+  corsDomain: finance.yahoo.com
+  q: AMD
+  quotesCount: 10
+  newsCount: 10
+}
