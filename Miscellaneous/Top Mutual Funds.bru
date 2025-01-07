@@ -1,0 +1,19 @@
+meta {
+  name: Top Mutual Funds
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://query1.finance.yahoo.com/v1/finance/screener/predefined/saved?formatted=false&lang=enUS&region=US&scrIds=top_mutual_funds&count=25
+  body: none
+  auth: none
+}
+
+params:query {
+  formatted: false
+  lang: enUS
+  region: US
+  scrIds: top_mutual_funds
+  count: 25
+}
