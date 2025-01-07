@@ -1,0 +1,17 @@
+meta {
+  name: Market Summary
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v6/finance/quote/marketSummary?lang=en&region=us&corsDomain=finance.yahoo.com
+  body: none
+  auth: none
+}
+
+params:query {
+  lang: en
+  region: us
+  corsDomain: finance.yahoo.com
+}
