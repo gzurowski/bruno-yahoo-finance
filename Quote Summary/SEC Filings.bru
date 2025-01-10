@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=recommendationTrend&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=secFilings&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
   body: none
   auth: none
 }
 
 params:query {
-  modules: recommendationTrend
+  modules: secFilings
   formatted: false
   corsDomain: finance.yahoo.com
   crumb: {{crumb}}
