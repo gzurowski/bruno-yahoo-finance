@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=assetProfile&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/:symbol?modules=balanceSheetHistory&formatted=false&corsDomain=finance.yahoo.com&crumb={{crumb}}
   body: none
   auth: none
 }
 
 params:query {
-  modules: assetProfile
+  modules: balanceSheetHistory
   formatted: false
   corsDomain: finance.yahoo.com
   crumb: {{crumb}}
